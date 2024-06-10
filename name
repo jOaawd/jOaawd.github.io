@@ -1,0 +1,276 @@
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/jOaawd/scriptLUA/main/dragscirpt')))()
+
+local Window = OrionLib:MakeWindow({Name = "FAdminHub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest"})
+
+--[[
+Name = <string> - The name of the UI.
+HidePremium = <bool> - Whether or not the user details shows Premium status or not.
+SaveConfig = <bool> - Toggles the config saving in the UI.
+ConfigFolder = <string> - The name of the folder where the configs are saved.
+IntroEnabled = <bool> - Whether or not to show the intro animation.
+IntroText = <string> - Text to show in the intro animation.
+IntroIcon = <string> - URL to the image you want to use in the intro animation.
+Icon = <string> - URL to the image you want displayed on the window.
+CloseCallback = <function> - Function to execute when the window is closed.
+]] local Tab = Window:MakeTab({
+    Name = "Home",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]] local Section = Tab:AddSection({
+    Name = "Home"
+})
+
+Tab:AddParagraph("FAdminHub")
+
+Tab:AddParagraph("Instagram","s0mthingaboutyou")
+
+Tab:AddToggle({
+    Name = "Toggle Walkspeed",
+    Default = false,
+    Callback = function(Value)
+        if Value then
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 60 -- Set desired walkspeed here
+        else
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+        end
+    end
+})
+
+
+Tab:AddToggle({
+    Name = "Toggle Jumppower",
+    Default = false,
+    Callback = function(Value)
+        if Value then
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = 200
+        else
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = 60
+        end
+    end
+})
+
+
+Tab:AddButton({
+    Name = "Delete Doors",
+    Callback = function()
+           game.Workspace.Doors:Destroy()   
+      end    
+})
+
+
+Tab:AddButton({
+    Name = "Delete Criminal Base",
+    Callback = function()
+           game.Workspace.Warehouses:Destroy()   
+      end    
+})
+
+
+Tab:AddButton({
+    Name = "Gravity 70",
+    Callback = function()
+           game.Workspace.Gravity = 70
+      end    
+})
+
+
+--[[
+Name = <string> - The name of the button.
+Callback = <function> - The function of the button.
+]]
+
+
+local Tab = Window:MakeTab({
+    Name = "Prison Life Admin",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+ 
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]] local Section = Tab:AddSection({
+    Name = "PrisonLife Admin scripts"
+})
+ 
+
+--[[
+Name = <string> - The name of the section.
+]] Tab:AddButton({
+    Name = "Fe Energize Gui",
+    Callback = function()
+           loadstring(game:HttpGet("https://pastebin.com/raw/0MLPL32f", true))()  
+      end    
+})
+
+ 
+--[[
+Name = <string> - The name of the section.
+]] Tab:AddButton({
+    Name = "Fly GUI v3",
+    Callback = function()
+           loadstring(game:HttpGet("https://raw.githubusercontent.com/XNEOFF/FlyGuiV3/main/FlyGuiV3.txt"))()
+      end    
+})
+
+
+--[[
+Name = <string> - The name of the section.
+]] Tab:AddButton({
+    Name = "Ro Chip Panel",
+    Callback = function()
+           loadstring(game:HttpGet("https://pastebin.com/raw/ycpE2mF4"))()   
+      end    
+})
+
+
+--[[
+Name = <string> - The name of the section.
+]] Tab:AddButton({
+    Name = "Music Hub V1 (key)",
+    Callback = function()
+           loadstring(game:HttpGet("https://pastebin.com/raw/kX5VhDTN"))()
+      end    
+})
+
+
+--[[
+Name = <string> - The name of the section.
+]] Tab:AddButton({
+    Name = "Infinite Yield Fe Edited",
+    Callback = function()
+           loadstring(game:HttpGet(('https://pastebin.com/raw/yRHbQADj'),true))()
+      end    
+})
+
+
+--[[
+Name = <string> - The name of the section.
+]] Tab:AddButton({
+    Name = "X Rawnder (Prison Life)",
+    Callback = function()
+           loadstring(game:HttpGet("https://bit.ly/x-Rawnder"))()
+      end    
+})
+
+
+--[[
+Name = <string> - The name of the section.
+]] Tab:AddButton({
+    Name = "Tiger Admin (Prison Life)",
+    Callback = function()
+           loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/Tigeradmin"))()
+      end    
+})
+
+
+--[[
+Name = <string> - The name of the section.
+]] Tab:AddButton({
+    Name = "PLadmin (Prison Life)",
+    Callback = function()
+           loadstring(game:HttpGet('https://raw.githubusercontent.com/elliexmln/PrizzLife/main/pladmin.lua'))()
+      end    
+})
+
+--[[
+Name = <string> - The name of the section.
+]] Tab:AddButton({
+    Name = "Prevail X (Prison Life)",
+    Callback = function()
+           loadstring(game:HttpGet("https://pastebin.com/raw/mHfK0Xk4", true))()
+      end    
+})
+
+
+--[[
+Name = <string> - The name of the section.
+]] Tab:AddButton({
+    Name = "Owl Hub (Prison Life)",
+    Callback = function()
+           loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))()
+      end    
+})
+
+
+--[[
+Name = <string> - The name of the section.
+]] Tab:AddButton({
+    Name = "PrisonWare (Prison Life)",
+    Callback = function()
+     loadstring(game:HttpGet("https://raw.githubusercontent.com/Denverrz/scripts/master/PRISONWARE_v1.3.txt"))()   
+      end    
+})
+
+
+
+local Tab = Window:MakeTab({
+    Name = "Admin",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+ 
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]] local Section = Tab:AddSection({
+    Name = "AdminScripts.."
+})
+ 
+ 
+ --[[
+Name = <string> - The name of the section.
+]] Tab:AddButton({
+    Name = "Z Admin",
+    Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/Diamondd96/z-Admin-5.0/main/z%20Admin%205.0"))();       
+      end    
+})
+
+
+
+
+
+
+
+
+local Tab = Window:MakeTab({
+    Name = "BloxFruits",
+    Icon = "rbxassetid://4483345998",
+    PremiumOnly = false
+})
+ 
+--[[
+Name = <string> - The name of the tab.
+Icon = <string> - The icon of the tab.
+PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
+]] local Section = Tab:AddSection({
+    Name = "BloxFruits Scripts"
+})
+ 
+ 
+  --[[
+Name = <string> - The name of the section.
+]] Tab:AddButton({
+    Name = "Min Gaming Hub",
+    Callback = function()
+            loadstring(game:HttpGet"https://raw.githubusercontent.com/Basicallyy/Basicallyy/main/MinGamingV4.lua")()    
+      end    
+})
+
+ --[[
+Name = <string> - The name of the section.
+]] Tab:AddButton({
+    Name = "RedHub",
+    Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/REDzHUB/BloxFruits/main/redz9999"))()  
+      end    
+})

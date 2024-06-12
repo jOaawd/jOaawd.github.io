@@ -256,6 +256,7 @@ PremiumOnly = <bool> - Makes the tab accessible to Sirus Premium users only.
     Name = "BloxFruits Scripts"
 })
  
+ Tab:AddParagraph("Keyless Hubs")
  
   --[[
 Name = <string> - The name of the section.
@@ -275,6 +276,17 @@ Name = <string> - The name of the section.
       end    
 })
 
+
+--[[
+Name = <string> - The name of the section.
+]] Tab:AddButton({
+    Name = "HiruHub",
+    Callback = function()
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/NGUYENVUDUY1/V3PRO/main/HiruHub.lua"))()
+      end    
+})
+
+Tab:AddParagraph("Hubs with Key")
 
 
 
